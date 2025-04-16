@@ -3,7 +3,7 @@ import UIKit
 import AudioToolbox
 
 private let isDevice = TARGET_OS_SIMULATOR == 0
-    
+
 public class SwiftVibratePlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "vibrate", binaryMessenger: registrar.messenger())
@@ -76,7 +76,7 @@ public class SwiftVibratePlugin: NSObject, FlutterPlugin {
               // Fallback on earlier versions
               AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             }
-         case "medium":
+          case "medium":
             if #available(iOS 10.0, *) {
               let generator = UIImpactFeedbackGenerator(style: .medium)
               generator.prepare()
@@ -85,7 +85,7 @@ public class SwiftVibratePlugin: NSObject, FlutterPlugin {
               // Fallback on earlier versions
               AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             }
-         case "light":
+          case "light":
             if #available(iOS 10.0, *) {
               let generator = UIImpactFeedbackGenerator(style: .light)
               generator.prepare()
