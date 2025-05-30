@@ -1,3 +1,9 @@
+## 1.3.5Add commentMore actions
+
+* Upgraded Android dependencies
+* Converted Android from Java to Kotlin
+* Replaces TARGET_OS_SIMULATOR check with targetEnvironment(simulator)
+
 ## 1.3.0
 
 * Fixing swift version
